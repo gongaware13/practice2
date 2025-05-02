@@ -54,6 +54,18 @@ app.get('/', (req, res) => {
     })
 });
 
+app.get('/practiceJSON', (req, res) => {
+    
+    const testObj = {
+        key1: "value1",
+        key2: "value2",
+        key3: "value3",
+    }
+    
+    res.json(testObj);
+
+});
+
 // Start the server and listen on the specified port
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
